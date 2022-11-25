@@ -29,7 +29,6 @@ namespace Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CategoryCreateVM model)
         {
-            if(!ModelState.IsValid) return View(model);
             var isSucceeded =  await _categoryService.CreateAsync(model);
 
             if (isSucceeded) return RedirectToAction(nameof(Index));

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7tkH9EC949Tcbj/nNKvTCfIi8yALhjUnRIlpJMmJ0VI=",
+  "Hash": "JYXC9QBLlTZI8Ndr3CJDVspUMqWZDBAe7DMEi56kO2s=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\2bf948cf-a893-4064-a49b-be28268e58c1_ForCV.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Web\\wwwroot\\images\\34ff7b0f-c080-4600-a096-ff6b34a31437_ForCV.jpeg",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "images/34ff7b0f-c080-4600-a096-ff6b34a31437_ForCV.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\34ff7b0f-c080-4600-a096-ff6b34a31437_ForCV.jpeg"
     },
     {
       "Identity": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Web\\wwwroot\\images\\622086d0-7a25-40b3-bda9-f5b3d8878308_ForCV.jpeg",

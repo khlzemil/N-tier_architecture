@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Web.Services.Abstract;
 using Web.ViewModels.Product;
+using Web.ViewModels.Product.ProductPhoto;
 
 namespace Web.Controllers
 {
@@ -90,7 +91,21 @@ namespace Web.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdatePhoto(int id)
         {
+            
+            var model = await _productService.GetUpdateProductPhotosModelAsync(id);
+            if (model == null) return NotFound();
+            return View(model);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdatePhoto(int id, ProductPhotoUpdateVM model)
+        {
+            var isSucceded = await _productService.UpdateProductPhotosAsync(model);
+
+            if (!isSucceded) return View(model);
+
+            return RedirectToAction(nameof(Index));
+            
         }
     }
 }

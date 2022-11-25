@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Web.Services.Abstract;
 using Web.ViewModels.Category;
 using Web.ViewModels.Product;
+using Web.ViewModels.Product.ProductPhoto;
 
 namespace Web.Services.Concrete
 {
@@ -293,10 +294,35 @@ namespace Web.Services.Concrete
             return true;
         }
 
-        //public async Task<bool> UpdateProductPhotosAsync(int id)
-        //{
+        public async Task<ProductPhotoUpdateVM> GetUpdateProductPhotosModelAsync(int id)
+        {
+            var photos = await _productPhotoRepository.GetAsync(id);
 
+            if(photos == null) return null;
 
-        //}
+            var model = new ProductPhotoUpdateVM
+            {
+                Id = photos.Id,
+                Order = photos.Order
+            };
+
+            return model;
+        }
+
+        public async Task<bool> UpdateProductPhotosAsync(ProductPhotoUpdateVM model)
+        {
+            if (!_modelState.IsValid) return false;
+
+            var photo = await _productPhotoRepository.GetAsync(model.Id);
+
+            if (photo == null) return false;
+
+            photo.Order = model.Order;
+
+             await _productPhotoRepository.UpdateAsync(photo);
+
+            return true;
+        }
+
     }
 }

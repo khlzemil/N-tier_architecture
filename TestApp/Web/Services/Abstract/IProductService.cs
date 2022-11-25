@@ -1,4 +1,5 @@
 ﻿using Web.ViewModels.Product;
+using Web.ViewModels.Product.ProductPhoto;
 
 namespace Web.Services.Abstract
 {
@@ -15,8 +16,9 @@ namespace Web.Services.Abstract
 
         Task<bool> DeleteProductAsync(int id);
         Task<bool> DeleteProductPhotosAsync(int id);
-        Task<bool> UpdateProductPhotosAsync(int id);
-        
+        Task<ProductPhotoUpdateVM> GetUpdateProductPhotosModelAsync(int id);
+        Task<bool> UpdateProductPhotosAsync(ProductPhotoUpdateVM model);
+
 
     }
 }

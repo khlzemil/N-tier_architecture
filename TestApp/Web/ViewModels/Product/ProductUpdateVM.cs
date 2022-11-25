@@ -21,7 +21,7 @@ namespace Web.ViewModels.Product
 
         public List<IFormFile>? Photos { get; set; }
 
-        public ICollection<ProductPhoto>? ProductPhotos { get; set; }
+        public ICollection<Core.Entities.ProductPhoto>? ProductPhotos { get; set; }
 
     }
 }
