@@ -17,5 +17,9 @@ namespace DataAccess.Contexts
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Product>  Products{ get; set; }
+        public DbSet<ProductPhoto> ProductPhotos{ get; set; }
+
+
     }
 }

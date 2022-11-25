@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\Start\\TestApp\\Core\\Core.csproj": {}
+    "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\Start\\TestApp\\Core\\Core.csproj": {
+    "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Start\\TestApp\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\hp\\Desktop\\Start\\TestApp\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\Start\\TestApp\\Core\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\N-tier_architecture\\TestApp\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.9, )"

@@ -1,0 +1,47 @@
+﻿@using Web.ViewModels.Product
+@model ProductIndexVM
+
+<a class="btn btn-primary" asp-action="create" asp-controller="product">Create</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Created at</th>
+            <th scope="col">Modified at</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Weigth</th>
+            <th scope="col">Status</th>
+            <th scope="col">Image</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Title</td>
+                <td>@product.CreatedAt.ToShortDateString()</td>
+                <td>@product.ModifiedAt.ToShortDateString()</td>
+                <td>@product.Description</td>
+                <td>@product.Quantity</td>
+                <td>@product.Price</td>
+                <td>@product.CategoryId</td>
+                <td>@product.Weigth</td>
+                <td>@product.Status</td>
+                <td><img class="rounded" style="width:100px ; height:100px; object-fit:cover" src="~/images/@product.MainPhotoPath"/></td>
+                <td>
+                    <a class="btn btn-primary mb-3 " asp-action="update" asp-controller="product" asp-route-id="@product.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="product" asp-route-id="@product.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

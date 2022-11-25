@@ -1,4 +1,6 @@
 using Core.Entities;
+using Core.Utilities.Abstract;
+using Core.Utilities.Concrete;
 using DataAccess.Contexts;
 using DataAccess.Repositories.Abstract;
 using DataAccess.Repositories.Concrete;
@@ -33,12 +35,15 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 #region Repositories
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductPhotoRepository, ProductPhotoRepository>();
 #endregion
 
 #region Services
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddSingleton<IFileService, FileService>();
 
 #endregion
 
